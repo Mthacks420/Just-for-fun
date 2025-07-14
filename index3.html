@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Do You Love Shuhan?</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      font-family: 'Open Sans', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3em;
+      color: #fff;
+      margin-bottom: 50px;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    button {
+      padding: 15px 40px;
+      font-size: 20px;
+      margin: 15px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    #yesBtn {
+      background-color: #ff4081;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #303f9f;
+      color: white;
+    }
+
+    #thankYou {
+      display: none;
+      font-size: 2em;
+      color: #fff;
+      animation: fadeIn 1.5s ease-in-out forwards;
+    }
+
+    .emoji {
+      font-size: 2.5em;
+      margin: 20px 0;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div id="main">
+    <h1>DO YOU LOVE SHUHAN?</h1>
+    <button id="yesBtn">YES 💖</button>
+    <button id="noBtn">NO 😒</button>
+  </div>
+
+  <div id="thankYou">
+    <div class="emoji">🥰😍😘💖</div>
+    <p>THANK YOU BABY 💕</p>
+    <div class="emoji">💖❤️💘💞</div>
+  </div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const main = document.getElementById("main");
+    const thankYou = document.getElementById("thankYou");
+
+    let noClickCount = 0;
+
+    noBtn.addEventListener("mouseover", () => {
+      noBtn.innerText = "YES 💖";
+      noBtn.style.backgroundColor = "#ff4081";
+    });
+
+    noBtn.addEventListener("click", () => {
+      noClickCount++;
+      switch(noClickCount) {
+        case 1:
+          alert("No চাপলে তোর মুখে ঠাডা পরবে😤");
+          break;
+        case 2:
+          alert("আবার no চাপতেছোছ🤨");
+          break;
+        case 3:
+          alert("তুই কি চাস না তোর মুখ ভালো থাকুক😑");
+          break;
+        case 4:
+          alert("বুঝছি তুর মরণের চুলকানি উঠছে😌");
+          break;
+        case 5:
+          alert("তোর কি মরণের ভয় নাই 😕");
+          break;
+        case 6:
+          alert("ডান পাশের yes চাপ😒");
+          break;
+        case 7:
+          alert("কথা পছন্দ হচ্ছে না? 🤨😕");
+        default:
+          alert("NO চাপতে থাক, কিন্তু আমি চাইছিই YES! 💖");
+      }
+    });
+
+    yesBtn.addEventListener("click", () => {
+      main.style.display = "none";
+      thankYou.style.display = "block";
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
